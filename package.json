@@ -1,0 +1,27 @@
+{
+  "name": "pure-javascript-components",
+  "version": "1.0.0",
+  "description": "that is my portifolio with html components like cards and stuff",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "start-dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edneyRoldao/pure-javascript-components.git"
+  },
+  "author": "edneyRoldao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edneyRoldao/pure-javascript-components/issues"
+  },
+  "homepage": "https://github.com/edneyRoldao/pure-javascript-components#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
