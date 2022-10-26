@@ -47,9 +47,10 @@ body {
 }
 
 .container .tab label::after {
-    content: '+';
+    content: '>';
     position: absolute;
-    right: 20px;
+    right: 10px;
+    top: 0;
     font-size: 2em;
     color: rgba(0, 0, 0, 0.1);
     transition: 1s;
@@ -60,7 +61,7 @@ body {
 }
 
 .container .tab input:checked ~ label::after {
-    transform: rotate(135deg);
+    transform: rotate(90deg);
 }
 
 .container .tab label h2 {

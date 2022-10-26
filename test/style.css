@@ -1,0 +1,293 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200,300;400;500;600;700;800;900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f5f8ff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-menu {
+    margin: 5px;
+    border: 3px solid #333;
+    min-height: 100px;
+}
+
+.content {
+    width: 56%;
+    margin: 5px;
+    border: 3px solid #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+}
+
+.sides {
+    width: 22%;
+    margin: 5px;
+    border: 3px solid #333;
+    min-height: 100vh;
+}
+
+.container .content div {
+    margin: 5px;
+    /* border: 3px solid #333; */
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.container .sides div {
+    margin: 5px;
+    border: 3px solid #333;
+    min-height: 100px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background: linear-gradient(135deg, #3c8ce7, #00eaff);
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.pagination {
+    border: 0;
+    min-height: 40px;
+    background: #ffffff;
+    border-radius: 5px;
+}
+  
+.pagination a {
+    color: black;
+    float: left;
+    margin-right: 3px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+.pagination a.active {
+    background: linear-gradient(135deg, #3c8ce7, #00eaff);
+    color: white;
+    border-radius: 10px;
+}
+  
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.container .content div .search-box {
+    min-height: 30px;    
+}
+
+.search-box input {
+    text-indent: 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.search-results {
+    border: 1px solid #333;
+    background: white;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: gray;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container .content div .search-btn {
+    color: white;
+    min-height: 15px;
+    min-width: 40px;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 0 10px 0 10px;
+    background: linear-gradient(135deg, #3c8ce7, #00eaff);
+}
+
+.container .content .search-btn h3 {
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+.container .content div .search-btn:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.search-results:hover {
+    cursor: pointer;
+}
+
+.table-footer {
+    margin-bottom: 10px;
+}
+.table-footer h4 {
+    font-size: 10px;
+    font-weight: 100;
+}
+
+.built-in-filters {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.close-icon {
+    border: 1px solid transparent;
+    background-color: transparent;
+    vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
+}
+
+.close-icon:after {
+    margin-left: -23px;
+	content: "X";
+	display: block;
+	width: 14px;
+	height: 15px;
+	background-color: #F5F5F5;
+	padding: 2px;
+	border-radius: 50%;
+	color: #333;
+	font-weight: 600;
+	font-size: 10px;
+	box-shadow: 0 0 2px #D4D4D4;
+	cursor: pointer;
+}
+
+.built-in-filters button {
+    margin-right: 15px;
+    width: 140px;
+    cursor: pointer;
+}
+
+.built-in-filters .on {
+    background-color: #00b33c;
+    border: none;
+    color: #fff;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 10px;
+    box-shadow: -3px -3px 5px rgba(255,255,255,.5),
+    3px 3px 5px #00b33c;
+}
+
+.built-in-filters .off {
+    background-color: #dd0004;
+    border: none;
+    color: #fff;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 10px;
+    box-shadow: -3px -3px 5px rgba(255,255,255,.5),
+    3px 3px 5px #DD0004;
+}
+
+.fa-info-circle {
+    color: #00eaff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-star {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.fa-eye-slash {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.fa-eye {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.built-in-filters .off:hover {
+    background-color: #f47174;
+    border: none;
+    color: #fff;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 10px;
+    box-shadow: -3px -3px 5px rgba(255,255,255,.5),
+    3px 3px 5px #f47174;
+    transition: background 0.5s;
+}
+
+.built-in-filters .on:hover {
+    background-color: #6fc276;
+    border: none;
+    color: #fff;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 10px;
+    box-shadow: -3px -3px 5px rgba(255,255,255,.5),
+    3px 3px 5px #6fc276;
+    transition: background 0.5s;
+}
+
+.built-in-filters .off:hover span {
+    display: none;
+}
+
+.built-in-filters .on:hover span {
+    display: none;
+}
+
+.built-in-filters .off:hover::before {
+    content: 'Aplicar filtro';
+    transition: 1s;
+}
+
+.built-in-filters .on:hover::before {
+    content: 'Remover Filtro';
+}

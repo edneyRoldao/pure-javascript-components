@@ -1,0 +1,37 @@
+
+
+.container {
+    background: yellow;
+    display: flex;
+}
+
+.container2 {
+    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.item {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background: #dfdfdf;
+}
+
+.item-1 {
+    min-height: 100px;
+
+}
+
+.item-2 {
+    min-height: 200px;
+
+}
+
+.item-3 {
+    min-height: 300px;
+
+}
