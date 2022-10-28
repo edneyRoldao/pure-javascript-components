@@ -96,8 +96,44 @@ modalOverlay.innerHTML = loadingSpinnerHTML
 const body = document.querySelector('body')
 body.appendChild(modalOverlay)
 
-// open modal listener
-const openModalBtn = document.querySelector('#openModalBtn')
-openModalBtn.addEventListener('click', () => {
-    modalOverlay.classList.add('active')
+// open modal with function
+function openLoadingModal() {
+    modalOverlay.classList.add('active')    
+}
+
+// open modal listener with id
+const openModalFromElementId = document.querySelector('#openModalBtn')
+
+if (openModalFromElementId) {
+    openModalFromElementId.addEventListener('click', () => {
+        modalOverlay.classList.add('active')
+        modalOverlay.activeTime = new Date()
+    })    
+}
+
+// open modal listener with class
+const openModalFromClass = document.querySelector('.openModalBtn')
+
+if (openModalFromClass) {
+    openModalFromClass.addEventListener('click', () => {
+        modalOverlay.classList.add('active')
+    })    
+}
+
+// close modal after some time
+const secondsToEnableCloseBtn = 30
+
+modalOverlay.addEventListener('click', () => {
+    console.log('close button pushed');
+    const secondsPassedAfterOpened = getSecondsBetweenDates(modalOverlay.activeTime)
+
+    if (secondsPassedAfterOpened > secondsToEnableCloseBtn) {
+        modalOverlay.classList.remove('active')        
+    }
 })
+
+function getSecondsBetweenDates(start, end = new Date()) {
+    const seconds = start.getTime() / 1000
+    const secondsNow = end.getTime() / 1000
+    return secondsNow - seconds    
+}
