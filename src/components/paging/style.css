@@ -1,0 +1,44 @@
+body {
+    background: #dee1e2;
+}
+
+.container {
+    margin-top: 200px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.pagination div {
+    border: 0;
+    min-height: 40px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+  
+.pagination a {
+    color: black;
+    float: left;
+    margin-right: 1px;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+  
+.pagination a.active {
+    background: linear-gradient(135deg, #3c8ce7, #00eaff);
+    color: white;
+    border-radius: 10px;
+}
+
+.pagination a.active:hover {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 10px;
+}
