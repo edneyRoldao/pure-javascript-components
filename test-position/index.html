@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap);
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #dee1e2;
+        }
+
+        .menu {
+            background-color: #fff;
+        }
+
+
+        .container {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 20% auto 20%;
+        }
+
+        .search-menu {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer {
+            padding: 10px;
+            border: 1px solid blue;
+        }
+
+        .container div {
+            background-color: #ccc;
+            padding: 2px;
+            border: 1px solid blue;
+        }
+
+        .select-opt {
+            position: absolute;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="menu">
+        Menu
+    </div>
+    
+    <div class="container">
+        <div class="container-left">
+            left
+        </div>
+        <div class="container-main">
+            
+            <p>Main Content</p>
+
+            <div class="search-menu">
+                <div class="pages-select">
+                    Pages
+                </div>
+    
+                <div class="type-select">
+                    <div class="select-input">Select a Language</div>
+                    <div class="select-opt">Select a Language</div>
+                </div>
+    
+                <div class="search-box">
+                    Input Search
+                </div>    
+            </div>
+
+            <div class="table-area">
+                table area
+            </div>
+
+            <div class="paging-area">
+                Paging area
+            </div>
+
+        </div>
+        <div class="container-right">
+            right
+        </div>        
+    </div>
+
+    <div class="footer">
+        Footer
+    </div>
+
+</body>
+</html>

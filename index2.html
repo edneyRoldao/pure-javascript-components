@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    canvas {
+      display: block;
+      margin: 20px auto;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myChart"></canvas>
+
+  <script>
+    // Dados do gráfico
+    var data = {
+      totalInvestido: 100,
+      totalJuros: 100
+    };
+
+    // Preparando os dados para o gráfico
+    var labels = ['Total Investido', 'Total de Juros'];
+    var values = [data.totalInvestido, data.totalJuros];
+
+    // Configuração do gráfico
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: labels,
+        datasets: [{
+          data: values,
+          backgroundColor: ['rgba(0, 123, 255, 0.2)', 'rgba(255, 0, 0, 0.2)'],
+          borderColor: ['rgba(0, 123, 255, 1)', 'rgba(255, 0, 0, 1)'],
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+  </script>
+</body>
+</html>
