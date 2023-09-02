@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Modal Component</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="modal-component.js"></script>
+
+</head>
+<body>
+
+    <modal id="first" open-on-load template-name="loading" close-after-sec="2"></modal>
+
+    <!-- <modal id="second" close-on-esc open-on-load close-after-sec="5">
+        <span>
+            teste modal 2
+        </span>
+    </modal> -->
+
+
+    <div class="container">
+
+        <button onclick="modalComponent.open('first')"> OPEN FIRST MODAL </button>
+
+    </div>
+
+</body>
+</html>

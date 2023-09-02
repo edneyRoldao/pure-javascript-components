@@ -1,23 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tooltip</title>
+    <title>tooltip</title>
 
-    <link rel="stylesheet" href="style.css">
-    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        .avatar {
+            display: flex;
+            height: 100px;
+            width: 200px;
+            color: #fff;
+            font-size: 23px;
+            border: 1px solid #F1F1F1;
+            align-items: center;
+            justify-content: center;
+            background-color: #009EDF;
+            border-radius: 15px;
+            margin-left: 45%;
+            margin-top: 15%;
+            position: relative;
+        }
+
+        .avatar::before,
+        .avatar::after {
+            --scale: 0;
+            --arrow-size: 10px;
+            --tooltip-color: #67CB95;
+            position: absolute;
+            top: -.25rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+            transition: 50ms transform;
+            transform-origin: bottom center;
+        }
+
+        .avatar::before {
+            --translate-y: calc(-100% - var(--arrow-size));
+            content: attr(data-tooltip);
+            width: max-content;
+            padding: .5rem;
+            background: var(--tooltip-color);
+            color: #fff;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .avatar:hover::before,
+        .avatar:hover::after {
+            --scale: 1;
+        }
+
+        .avatar::after {
+            --translate-y: calc(-1 * var(--arrow-size));
+            content: '';
+            border: var(--arrow-size) solid transparent;
+            border-top-color: var(--tooltip-color);
+            transform-origin: top center;
+
+        }
+    </style>
 
 </head>
+
 <body>
-
-    <div class="container">
-        <span class="my-tooltip" data-tooltip="Tooltip Content">
-            <ion-icon class="my-icon" name="trash-outline"></ion-icon>
-        </span>
-    </div>
-
+    <div class="avatar" data-tooltip="era pra ser thinking cat">tooltip</div>
 </body>
+
 </html>

@@ -22,26 +22,3 @@ body {
     padding: 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-
-ion-icon:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.my-icon {
-    font-size: 30px;
-    color: red;
-    cursor: pointer;
-}
-
-.my-tooltip::before {
-    /* content: attr(data-tooltip); */
-    content: '';
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    background: #333;
-}
-

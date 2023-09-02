@@ -1,0 +1,10 @@
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  /* Apply the animation to the element */
+  .fade-in-out {
+    animation: fadeInOut 2s infinite; /* Adjust the animation duration as needed */
+  }
